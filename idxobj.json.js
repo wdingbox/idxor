@@ -18,7 +18,7 @@ var idxobj = {
             "idxor_watch.nd.js": 2955
         },
         {
-            "update_projs_idxor.sh": 537
+            "update_projs_idxor.sh": 538
         },
         {
             "watch.sh": 439

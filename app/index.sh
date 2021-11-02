@@ -8,13 +8,14 @@
 # gen index for bitbucket. 
 TargetDir="../"
 TargetExe="./app/watch_idx.nod.js"
+WatchDir="./"
 
 cp *.html ${TargetDir}.
 cd ${TargetDir}
 ls -ls ${TargetExe}
-node ${TargetExe} 
+node ${TargetExe}    #update only
 open idxor.html
-node ${TargetExe} "./"
+node ${TargetExe} ${WatchDir}   #keep watching..
 cd -
 
 #back to this folder.

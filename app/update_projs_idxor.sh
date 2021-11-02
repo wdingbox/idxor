@@ -16,7 +16,7 @@ run_proj()
 {
     # gen index for bitbucket. 
     TargetDir="../../$1/"
-    ExeInTarget="../idxor/app/watch_idx.nod.js"
+    ExeInTarget="../idxor/app/idxor_watch.nd.js"
     htmfile="idxor.html"
     WatchDir="./"
 

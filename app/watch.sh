@@ -7,7 +7,7 @@
 
 # gen index for bitbucket. 
 TargetDir="../"
-TargetExe="./app/watch_idx.nod.js"
+TargetExe="./app/idxor_watch.nd.js"
 WatchDir="./"
 
 cp *.html ${TargetDir}.

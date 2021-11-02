@@ -1,7 +1,7 @@
 var idxobj = {
     "./": [
         {
-            "idxobj.json.js": 937
+            "idxobj.json.js": 1048
         },
         {
             "idxor.html": 1448
@@ -26,9 +26,6 @@ var idxobj = {
     ],
     "app2": [
         {
-            "github_home.htm": 867
-        },
-        {
             "idxor.html": 1448
         },
         {
@@ -36,6 +33,15 @@ var idxobj = {
         },
         {
             "watch_idx.nod.js": 2955
+        }
+    ],
+    "app2/test": [],
+    "app2/test/a": [
+        {
+            "github_home.htm": 867
+        },
+        {
+            "~make_htm.nd copy.js": 1587
         },
         {
             "~make_htm.nd.js": 1587

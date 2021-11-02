@@ -12,7 +12,7 @@ var idxobj = {
             "github_home.htm": 867
         },
         {
-            "idxor.html": 1502
+            "idxor.html": 1518
         },
         {
             "index.sh": 383

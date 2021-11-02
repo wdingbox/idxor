@@ -1,0 +1,112 @@
+#paneltoggler,
+#panel {
+    position: fixed;
+    background-color: lightblue;
+    right: 40px;
+}
+
+#paneltoggler {
+    right: 20px;
+}
+
+#explorePanel {
+    margine-top: 100px;
+    padding-top: 100px;
+}
+
+#hilipathfile {
+    width: 100%;
+}
+
+textarea {
+    width: 500px;
+    height: 500px;
+}
+
+.dir {
+    display: block;
+}
+
+ol {
+    left: 10px;
+}
+
+.collapse {
+    visibility: hidden;
+    display: none;
+}
+
+.expand {
+    visibility: visible;
+}
+
+.pathdir_expand {
+    background-color: cyan;
+}
+
+.Mark {
+    background-color: red;
+}
+
+.RemeberClosed {
+    background-color: lightgrey;
+
+}
+
+.file_open_Mark {
+    background-color: pink;
+}
+
+.toggleMarkFile {
+    background-color: lightgreen;
+}
+
+.hili {
+    background-color: lightgreen;
+}
+.hiliNode{
+    border: 2px solid red;
+}
+
+.HideItm {
+    display: none;
+    visibility: hidden;
+
+}
+
+xa[href] {
+    background-color: cyan;
+}
+
+xxspan {
+    display: block;
+}
+
+img {
+    width: 50px;
+}
+
+.treenode {
+    display: block;
+    /*background-color: lightcyan;*/
+}
+
+.clapse,
+.calpseNode {
+    display: none;
+
+}
+.dary{
+    margin-right: 40px;
+}
+.childrennodes{
+    
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0 0 0 0;
+    color:blue;
+}
+.togleNode{
+    border:1px solid blue;
+}

@@ -1,7 +1,7 @@
 var idxobj = {
     "./": [
         {
-            "idxobj.json.js": 1111
+            "idxobj.json.js": 1170
         },
         {
             "idxor.html": 1519
@@ -18,7 +18,10 @@ var idxobj = {
             "idxor_watch.nd.js": 2955
         },
         {
-            "update_projs_idxor.sh": 538
+            "update_idxor_box.sh": 538
+        },
+        {
+            "update_idxor_soft.sh": 550
         },
         {
             "watch.sh": 439

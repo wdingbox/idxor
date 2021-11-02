@@ -122,6 +122,9 @@ function gen_tree_indobj() {
         $(this).addClass("hiliNode")
     })
 }
+
+
+
 $(function () {
     init_localhost_anchor();
 

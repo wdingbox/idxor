@@ -15,10 +15,10 @@ var idxobj = {
             "idxor.html": 1519
         },
         {
-            "index.sh": 438
+            "update_projs_idxor.sh": 536
         },
         {
-            "update_projs_idxor.sh": 536
+            "watch.sh": 438
         },
         {
             "watch_idx.nod.js": 2955

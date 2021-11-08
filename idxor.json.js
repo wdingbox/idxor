@@ -1,4 +1,4 @@
-var idxobj = {
+var idxor = {
     "./": [
         {
             "idxobj.json.js": 1225

@@ -6,15 +6,6 @@ const fs = require('fs');
 var path = require('path');
 const net = require('net');
 
-function ProcArgv(cbf) {
-    this.m_argv = process.argv.slice(2);
-    if (this.m_argv.length === 0) {
-        console.log("missing params:\nusrname pat")
-    }
-    var obj = {};
-    this.m_argv.forEach(function (str) {
-    });
-}
 
 var DirFileUti = {
     getDirectories: function (srcpath) {
@@ -30,7 +21,7 @@ var DirFileUti = {
         });
     },
 
-    genJs: function (srcPath, output) {
+    recursive_walk: function (srcPath, output) {
         var fary = this.getPathfiles(srcPath);
         var dary = this.getDirectories(srcPath);
 
@@ -45,15 +36,8 @@ var DirFileUti = {
         }
         for (var i = 0; i < dary.length; i++) {
             var spath = dary[i];
-            this.genJs(path.join(srcPath, spath), output);
+            this.recursive_walk(path.join(srcPath, spath), output);
         }
-    },
-    genJs_writefile: function () {
-        var output = {}
-        this.genJs("./", output)
-        var str = "var idxobj = " + JSON.stringify(output, null, 4)
-        //console.log(output)
-        fs.writeFileSync("idxobj.json.js", str, "utf8")
     }
 }
 
@@ -65,7 +49,7 @@ function CurPathfiles() {
 }
 CurPathfiles.prototype.run = function () {
     if (false === this.take_argv()) return
-    this.work()
+    this.walk()
     this.get_gitconfig()
     this.up_gitconfig()
 }
@@ -80,18 +64,18 @@ CurPathfiles.prototype.take_argv = function () {
     }
     if (this.m_argv.length === 3 && '-w' === this.m_argv[2]) {
         console.log("config will changed.")
-        this.m_bWrite =true
+        this.m_bWrite = true
     }
     this.m_wd = this.m_argv[0]
     this.m_usrpat = this.m_argv[1]
 
     return true
 }
-CurPathfiles.prototype.work = function () {
+CurPathfiles.prototype.walk = function () {
     this.m_PathfilesObj = {}
     var wdir = "./";
     if (this.m_wd) wdir = this.m_wd
-    DirFileUti.genJs(wdir, this.m_PathfilesObj)
+    DirFileUti.recursive_walk(wdir, this.m_PathfilesObj)
     //this.str = "var idxobj = " + JSON.stringify(this.m_PathfilesObj, null, 4)
 }
 CurPathfiles.prototype.get_gitconfig = function (cbf) {
@@ -117,37 +101,35 @@ CurPathfiles.prototype.up_gitconfig = function () {
                 var str = `${_this.m_usrpat}@`
                 var ups = mat[0].replace(mat[1], str)
                 txt = txt.replace(mat[0], ups)
-            }else{
+            } else {
                 var ups = `https://${_this.m_usrpat}@github.com/`
                 txt = txt.replace(mat[0], ups)
             }
         }
 
-        console.log("after:\n", txt)
-        if(_this.m_bWrite){
+        console.log("after changes:\n", txt)
+        if (_this.m_bWrite) {
             fs.writeFileSync(cfg, txt, "utf8")
             console.log("confg is updated.")
         }
-        else{
+        else {
             console.log("*** This is a test. Please set 3rd param in cmdline to write: -w ")
         }
     })
 
-    this.str = JSON.stringify(this.m_gitar, null, 4)
+    var str = JSON.stringify(this.m_gitar, null, 4)
+    console.log("config files:\n", str)
 }
 
 
 
 
 var cpf = new CurPathfiles()
-
-cpf.m_wd = "../"
-cpf.m_usrname =
-    cpf.run()
+cpf.run()
 
 
-    // wdingbox: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
+// wdingbox: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
 //DirFileUti.genJs_writefile();
 
-console.log("v2021_10_25 watchDir.")
+console.log("v2021_11_12.")
 

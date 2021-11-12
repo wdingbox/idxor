@@ -6,21 +6,20 @@
 
 
 # gen index for bitbucket. 
-TargetDir="../"
-TargetExe="./batch_git_config_update/configit.nd.js"
-WatchDir="./"
+TargetDir="./"
+TargetExe="./configit.nd.js"
 
-
-ls -l
+echo pat=$1
+echo cmd=$2
 
 cd ${TargetDir}
-ls -ls ${TargetExe}
-node ${TargetExe}   $1 $2 $3
+ls -l
+node ${TargetExe}   ../ wdingbox:$1 $2
 
 cd -
 
 #back to this folder.
-#node ./../../../bitbucket/wdingsoft/utis/index.nod.js
+
 
 
 

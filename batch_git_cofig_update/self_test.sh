@@ -6,15 +6,15 @@
 
 
 # gen index for bitbucket. 
-TargetDir="./"
-TargetExe="./configit.nd.js"
+TargetDir="../"
+TargetExe="./batch_git_cofig_update/configit.nd.js"
 
 echo pat=$1
 echo cmd=$2
 
 cd ${TargetDir}
 ls -l
-node ${TargetExe}   ../ wdingbox:$1 $2
+node ${TargetExe}   ./ wdingbox:$1 $2
 
 cd -
 

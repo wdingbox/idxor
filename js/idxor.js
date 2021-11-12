@@ -64,7 +64,7 @@ function gen_img_indobj() {
                 if (ext.type === "img") {
                     totfiles++
                     str = `<img src='${path}/${f}'/>`
-                    tbs += `<a href='${path}/${f}'>${str}</a>`
+                    tbs += `<div class='pic'><a href='${path}/${f}'>${str}</a><br>${f}</div>`
                 }
             }
         })

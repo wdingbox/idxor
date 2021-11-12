@@ -110,3 +110,8 @@ img {
 .togleNode{
     border:1px solid blue;
 }
+
+div.pic{
+    float: left;
+    font-size: 3px;
+}

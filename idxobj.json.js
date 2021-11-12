@@ -1,13 +1,10 @@
 var idxobj = {
     "./": [
         {
-            "idxobj.json.js": 1225
+            "idxobj.json.js": 1283
         },
         {
-            "idxor.html": 1519
-        },
-        {
-            "idxor.json.js": 1224
+            "idxor.html": 1655
         }
     ],
     "app": [
@@ -15,19 +12,19 @@ var idxobj = {
             "github_home.htm": 867
         },
         {
-            "idxor.html": 1519
+            "idxor.html": 1517
         },
         {
             "idxor_watch.nd.js": 2955
+        },
+        {
+            "self_test.sh": 439
         },
         {
             "update_idxor_box.sh": 538
         },
         {
             "update_idxor_soft.sh": 851
-        },
-        {
-            "watch.sh": 439
         },
         {
             "~make_htm.nd.js": 1587
@@ -58,12 +55,20 @@ var idxobj = {
     ],
     "css": [
         {
-            "idxor.css": 1245
+            "idxor.css": 1294
+        }
+    ],
+    "img": [
+        {
+            "t.gif": 0
+        },
+        {
+            "t2.jpeg": 0
         }
     ],
     "js": [
         {
-            "idxor.js": 6659
+            "idxor.js": 6690
         }
     ],
     "js/jq": [

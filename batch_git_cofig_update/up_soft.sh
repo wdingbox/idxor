@@ -6,8 +6,8 @@
 
 
 # gen index for bitbucket. 
-TargetDir="../../../"
-TargetExe="./wdingbox/idxor/batch_git_cofig_update/configit.nd.js"
+TargetDir="../../../wdingsoft/"
+TargetExe="../wdingbox/idxor/batch_git_cofig_update/configit.nd.js"
 
 echo pat=$1
 echo cmd=$2

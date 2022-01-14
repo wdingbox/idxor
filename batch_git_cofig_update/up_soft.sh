@@ -14,7 +14,7 @@ echo cmd=$2
 
 cd ${TargetDir}
 ls -l
-node ${TargetExe}   ./ wdingsoft:$1 $2
+sudo node ${TargetExe}   ./ wdingsoft:$1 $2
 
 cd -
 

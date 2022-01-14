@@ -52,6 +52,7 @@ CurPathfiles.prototype.run = function () {
     this.walk()
     this.get_gitconfig()
     this.up_gitconfig()
+    console.log("\n\n\n\n")
 }
 CurPathfiles.prototype.take_argv = function () {
     this.m_argv = process.argv.slice(2);
@@ -91,7 +92,7 @@ CurPathfiles.prototype.up_gitconfig = function () {
     var _this = this
     this.m_gitar.forEach(function (dir) {
         var cfg = `${dir}/config`
-        console.log("cfg=", cfg)
+        console.log("\n\n\n------old cfg=", cfg, "\npat:", _this.m_usrpat, "\n-w:", _this.m_bWrite )
         var txt = fs.readFileSync(cfg, "utf8")
         console.log(txt)
         var mat = txt.match(/https[\:][\/]{2}(.{0,})github[\.]com[\/]/)
@@ -110,7 +111,7 @@ CurPathfiles.prototype.up_gitconfig = function () {
         console.log("after changes:\n", txt)
         if (_this.m_bWrite) {
             fs.writeFileSync(cfg, txt, "utf8")
-            console.log("confg is updated.")
+            console.log("confg is updated.", cfg)
         }
         else {
             console.log("*** This is a test. Please set 3rd param in cmdline to write: -w ")
@@ -118,7 +119,7 @@ CurPathfiles.prototype.up_gitconfig = function () {
     })
 
     var str = JSON.stringify(this.m_gitar, null, 4)
-    console.log("config files:\n", str)
+    console.log("\n\n\n updated config files:\n", str)
 }
 
 

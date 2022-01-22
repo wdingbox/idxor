@@ -10,7 +10,7 @@ TargetDir="../../../wdingsoft/"
 TargetExe="../wdingbox/idxor/batch_git_cofig_update/configit.nd.js"
 
 echo pat=$1
-echo cmd=$2
+echo cmd=$2  #  -w :write
 
 cd ${TargetDir}
 ls -l

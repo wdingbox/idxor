@@ -92,8 +92,9 @@ CurPathfiles.prototype.up_gitconfig = function () {
     var _this = this
     this.m_gitar.forEach(function (dir) {
         var cfg = `${dir}/config`
-        console.log("\n\n\n------old cfg=", cfg, "\npat:", _this.m_usrpat, "\n-w:", _this.m_bWrite )
+        console.log("\n\n\n----------------", "\npat:", _this.m_usrpat, "\n -w:", _this.m_bWrite, "\ncfg=", cfg,  )
         var txt = fs.readFileSync(cfg, "utf8")
+        console.log("Before changes:")
         console.log(txt)
         var mat = txt.match(/https[\:][\/]{2}(.{0,})github[\.]com[\/]/)
         if (mat) {
@@ -108,7 +109,7 @@ CurPathfiles.prototype.up_gitconfig = function () {
             }
         }
 
-        console.log("after changes:\n", txt)
+        console.log("After changes:\n", txt)
         if (_this.m_bWrite) {
             fs.writeFileSync(cfg, txt, "utf8")
             console.log("confg is updated.", cfg)

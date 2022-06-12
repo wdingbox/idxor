@@ -61,7 +61,7 @@ CurPathfiles.prototype.take_argv = function () {
         return false
     }
     if (this.m_argv.length === 2) {
-        console.log("This is trial test. To change config, please add -w")
+        console.log("This is trial test. To change config, please type cmd [pat] [-w]")
     }
     if (this.m_argv.length === 3 && '-w' === this.m_argv[2]) {
         console.log("config will changed.")

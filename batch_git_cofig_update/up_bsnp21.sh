@@ -6,7 +6,7 @@
 
 
 # gen index for bitbucket. 
-Root_Name="nbsp21"
+Root_Name="bsnp21"
 TargetDir="../../../${Root_Name}/"
 TargetExe="../wdingbox/idxor/batch_git_cofig_update/configit.nd.js"
 

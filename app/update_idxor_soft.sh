@@ -49,3 +49,5 @@ run_proj "pkg15"
 run_proj "pkg16"
 run_proj "pkg17"
 run_proj "pkg20"
+
+run_proj "taxofam"

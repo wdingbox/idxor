@@ -32,4 +32,6 @@ run_proj()
 
 run_proj "obilab"
 
+run_proj "missionary"
+
 run_proj "pubs"
